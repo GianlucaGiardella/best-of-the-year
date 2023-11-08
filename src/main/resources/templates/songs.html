@@ -15,8 +15,10 @@
 </ul>
 <ul>
     <li th:each="song : ${songList}">
-        <span th:text="${song.id}"></span>
-        <span th:text="${song.title}"></span>
+        <a th:href="@{|/songs/${song.id}|}">
+            <span th:text="${song.id}"></span>
+            <span th:text="${song.title}"></span>
+        </a>
     </li>
 </ul>
 </body>
