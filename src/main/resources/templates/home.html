@@ -8,10 +8,10 @@
     <title>Home</title>
 </head>
 <body>
-<h1 th:text="|Best of the year by ${title}\"></h1>
+<h1 th:text="|Best of the year by ${title}|"></h1>
 <ul>
-    <li><a th:href="movies">movies</a></li>
-    <li><a th:href="songs">songs</a></li>
+    <li><a th:href="@{movies}">Movies</a></li>
+    <li><a th:href="@{songs}">Songs</a></li>
 </ul>
 </body>
 </html>

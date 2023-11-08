@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Details</title>
+</head>
+<body>
+<h1>Movie Detail</h1>
+<ul>
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/movies}">Movies</a></li>
+    <li><a th:href="@{/songs}">Songs</a></li>
+</ul>
+<div th:if="${movie != null}">
+    <h3 th:text="|Id: ${movie.id}|"></h3>
+    <h2 th:text="|Title: ${movie.title}|"></h2>
+    <h3 th:text="|Author: ${movie.author}|"></h3>
+    <h3 th:text="|Description: ${movie.description}|"></h3>
+</div>
+</body>
+</html>

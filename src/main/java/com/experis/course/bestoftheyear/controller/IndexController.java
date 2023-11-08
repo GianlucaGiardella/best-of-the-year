@@ -5,8 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 @RequestMapping("/")
@@ -17,33 +15,5 @@ public class IndexController {
         String name = "Gianluca";
         model.addAttribute("title", name);
         return "home";
-    }
-
-    private List<String> getBestMovies() {
-        List<String> movies = new ArrayList<>();
-        movies.add("Il Cavaliere Oscuro");
-        movies.add("Iron-Man");
-        movies.add("Fast and Furious");
-        return movies;
-    }
-
-    private List<String> getBestSongs() {
-        List<String> songs = new ArrayList<>();
-        songs.add("Parole di ghiaccio");
-        songs.add("Not afraid");
-        songs.add("Despacito");
-        return songs;
-    }
-
-    @GetMapping("movies")
-    public String movies(Model model) {
-        model.addAttribute("movies", String.join(", ", getBestMovies()));
-        return "movies";
-    }
-
-    @GetMapping("songs")
-    public String songs(Model model) {
-        model.addAttribute("songs", String.join(", ", getBestSongs()));
-        return "songs";
     }
 }
