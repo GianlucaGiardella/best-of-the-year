@@ -15,7 +15,7 @@ public class IndexController {
     @GetMapping("home")
     public String home(Model model) {
         String name = "Gianluca";
-        model.addAttribute("title", "Best of the year by " + name);
+        model.addAttribute("title", name);
         return "home";
     }
 
